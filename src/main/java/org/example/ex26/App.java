@@ -5,16 +5,13 @@
 
 package org.example.ex26;
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class App
 {
     public static void main(String[] args)
     {
-        int result;
-        String strength;
         int months;
-        //Gather inputs in string form
+        //Gather inputs in double
         Scanner scan = new Scanner(System.in);
         System.out.print("What is your balance: ");
         double balance = scan.nextDouble();
