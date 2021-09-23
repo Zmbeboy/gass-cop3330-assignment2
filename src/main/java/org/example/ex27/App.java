@@ -8,39 +8,39 @@ import java.util.Scanner;
 
 public class App
 {
-    public static boolean firstNameValidate(String fname)
+    public static String firstNameValidate(String fname,String output)
     {
         boolean result = true;
         if(fname.length() < 2)
         {
-            System.out.println("The first name must be at least 2 characters long.");
+            output += "The first name must be at least 2 characters long.\n";
             result = false;
         }
         if(fname == "")
         {
-            System.out.println("The first name must be filled in.");
+            output +="The first name must be filled in.\n";
             result = false;
         }
-        return result;
+        return output;
     }
 
-    public static boolean lastNameValidate(String lname)
+    public static String lastNameValidate(String lname, String output)
     {
         boolean result = true;
         if(lname.length() < 2)
         {
-            System.out.println("The last name must be at least 2 characters long.");
+            output += "The last name must be at least 2 characters long.\n";
             result = false;
         }
         if(lname == "")
         {
-            System.out.println("The last name must be filled in.");
+            output += "The last name must be filled in.\n";
             result = false;
         }
-        return result;
+        return output;
     }
 
-    public static boolean EIDValidate(String EID)
+    public static String EIDValidate(String EID, String output)
     {
         boolean result = true;
         if(EID.length() != 7)
@@ -75,12 +75,12 @@ public class App
         }
         if(result == false)
         {
-            System.out.println("The Employee ID must be in the format of AA-1234");
+            output+="The Employee ID must be in the format of AA-1234\n";
         }
-        return result;
+        return output;
     }
 
-    public static boolean ZIPValidate(String ZIP)
+    public static String ZIPValidate(String ZIP, String output)
     {
         boolean result = true;
         if(ZIP.length() != 5)
@@ -96,23 +96,27 @@ public class App
         }
         if(result == false)
         {
-            System.out.println("The zipcode must be a five digit number");
+            output +="The zipcode must be a five digit number\n";
         }
-        return result;
+        return output;
     }
 
     public static void validateInput(String fname,String lname, String ZIP, String EID)
     {
-        boolean fNameRes = firstNameValidate(fname);
-        boolean lNameRes = lastNameValidate(lname);
-        boolean EIDRes = EIDValidate(EID);
-        boolean ZIPRes = ZIPValidate(ZIP);
+        String output = "";
+        output = firstNameValidate(fname,output);
+        output = lastNameValidate(lname,output);
+        output = EIDValidate(EID,output);
+        output = ZIPValidate(ZIP,output);
 
 
-        if(fNameRes == true && lNameRes == true && ZIPRes == true && EIDRes == true)
+
+        if(output == "")
         {
-            System.out.println("There were no errors found.");
+            output = "There were no errors found.";
         }
+
+        System.out.println(output); //only output statement
 
     }
 
