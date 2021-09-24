@@ -3,8 +3,6 @@
  *  Copyright 2021 Eric Gass
  */
 
-//
-
 package org.example.ex28;
 import java.util.Scanner;
 

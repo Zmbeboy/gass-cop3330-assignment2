@@ -109,8 +109,6 @@ public class App
         output = EIDValidate(EID,output);
         output = ZIPValidate(ZIP,output);
 
-
-
         if(output == "")
         {
             output = "There were no errors found.";
