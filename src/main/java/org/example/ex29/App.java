@@ -8,6 +8,11 @@ import java.util.Scanner;
 
 public class App
 {
+    public static int getYears(int rate)
+    {
+        int years = (int) Math.ceil((double)72/rate);
+        return years;
+    }
     public static void main(String[] args)
     {
         int rate = 1;
@@ -36,7 +41,7 @@ public class App
                 System.out.println("Sorry. That's not a valid input.");
             }
         }
-        int years = (int) Math.ceil((double)72/rate);
+        int years = getYears(rate);
         System.out.println("It will take "+years+" years to double your initial investment");
     }
 }

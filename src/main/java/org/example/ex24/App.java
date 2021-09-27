@@ -9,6 +9,25 @@ import java.util.Arrays;
 
 public class App
 {
+    public static boolean areAnagrams(char[] word1, char[] word2)
+    {
+        //if the arrays are the same length compare each character
+        if(word1.length == word2.length)
+        {
+            for (int k = 0; k <word1.length;k++)
+            {
+                if(word1[k]!=word2[k]) //if the characters aren't equal, output they aren't anagrams and exit the program.
+                {
+                    return false;
+                }
+            }
+        }
+        else//if they arent equal lengths strings exit out
+        {
+            return false;
+        }
+        return true;
+    }
     public static void main(String[] args)
     {
         //gathers inputs in string form
@@ -35,23 +54,14 @@ public class App
         Arrays.sort(word1);
         Arrays.sort(word2);
 
-        //if the strings are the same length compare each character
-        if(string1.length() == string2.length())
+        boolean result = areAnagrams(word1,word2);
+        if(result)
         {
-            for (int k = 0; k <string1.length();k++)
-            {
-                if(word1[k]!=word2[k]) //if the characters aren't equal, output they aren't anagrams and exit the program.
-                {
-                    System.out.println(String.format("%s and %s are NOT anagrams.",string1,string2));
-                    System.exit(1);
-                }
-            }
+            System.out.println(String.format("%s and %s are anagrams.",string1,string2)); //output statement if the strings are anagrams
         }
-        else//if they arent equal lengths strings exit out
+        else
         {
             System.out.println(String.format("%s and %s are NOT anagrams.",string1,string2));
-            System.exit(1);
         }
-        System.out.println(String.format("%s and %s are anagrams.",string1,string2)); //output statement if the strings are anagrams
     }
 }

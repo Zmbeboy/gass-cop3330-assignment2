@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class App
 {
-    public static void main(String[] args)
+    public static int getTotal()
     {
         Scanner scan = new Scanner(System.in);
         int total = 0;
@@ -17,6 +17,11 @@ public class App
             System.out.print("Enter a number: ");
             total += scan.nextInt();
         }
+        return total;
+    }
+    public static void main(String[] args)
+    {
+        int total = getTotal();
         System.out.println("The total is "+total+".");
     }
 }

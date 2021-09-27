@@ -8,6 +8,10 @@ import java.util.*;
 
 public class App
 {
+    public static int getRandom()
+    {
+        return (int)Math.ceil(Math.random()*4);
+    }
     public static void main(String[] args)
     {
         List<String> Responses = new ArrayList<String>();
@@ -21,7 +25,7 @@ public class App
         System.out.println("What is your question?");
         String temp = scan.nextLine();
 
-        int num =(int)Math.ceil(Math.random()*4);
+        int num = getRandom();
 
         System.out.println(Responses.get(num));
     }

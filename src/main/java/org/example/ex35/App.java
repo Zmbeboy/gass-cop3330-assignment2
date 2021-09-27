@@ -28,7 +28,7 @@ public class App
             }
         }
 
-        int random = (int)Math.random()*employees.size();
+        int random = (int)(Math.random()*employees.size());
         System.out.println("The winner is: "+employees.get(random));
     }
 }

@@ -8,6 +8,14 @@ import java.util.*;
 
 public class App
 {
+    public static void printResult(List<String> employees)
+    {
+        System.out.println("\nThere are 4 employees:");
+        for(int i = 0; i<4;i++)
+        {
+            System.out.println(employees.get(i));
+        }
+    }
     public static void main(String[] args)
     {
         List<String> employees = new ArrayList<String>();
@@ -30,10 +38,6 @@ public class App
 
         employees.remove(remove);
 
-        System.out.println("\nThere are 4 employees:");
-        for(int i = 0; i<4;i++)
-        {
-            System.out.println(employees.get(i));
-        }
+        printResult(employees);
     }
 }
