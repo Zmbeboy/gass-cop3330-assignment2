@@ -8,20 +8,21 @@ import java.util.*;
 
 public class App
 {
+
     public static Integer[] filterEvenNumbers(int[]nums)
     {
         System.out.print("The even numbers are ");
         Integer[] evens;
-        List<Integer> indexes = new ArrayList<>();
+        List<Integer> evenNums = new ArrayList<>();
         int j = 0;
         for(int i = 0; i < nums.length; i++)
         {
             if(nums[i]%2==0)
             {
-                indexes.add(nums[i]);
+                evenNums.add(nums[i]);
             }
         }
-        evens = indexes.toArray(new Integer[indexes.size()]);
+        evens = evenNums.toArray(new Integer[evenNums.size()]);
         return evens;
     }
     public static void main(String[] args)
