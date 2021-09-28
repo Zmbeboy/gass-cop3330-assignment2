@@ -22,7 +22,7 @@ public class App
         List<Map<String, String>> maps = new ArrayList<Map<String, String>>();
 
         Map<String, String> map1 = new HashMap<String, String>();
-        map1 = addToMap("Josh","Johnson","Manager","2016-12-31", map1);
+        map1 = addToMap("John","Johnson","Manager","2016-12-31", map1);
 
         Map<String, String> map2 = new HashMap<String, String>();
         map2 = addToMap("Tou","Xiong","Software Engineer","2016-10-05", map2);
@@ -37,7 +37,7 @@ public class App
         map5 = addToMap("Jacquelyn","Jackson","DBA","", map5);
 
         Map<String, String> map6 = new HashMap<String, String>();
-        map6 = addToMap("Sally","Webber","Web Developer","2015-12-18", map6);
+        map6 = addToMap("Sally","Weber","Web Developer","2015-12-18", map6);
 
         maps.add(map1);
         maps.add(map2);
