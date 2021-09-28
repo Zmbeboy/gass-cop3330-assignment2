@@ -10,32 +10,26 @@ public class App
 {
     public static String firstNameValidate(String fname,String output)
     {
-        boolean result = true;
         if(fname.length() < 2)
         {
             output += "The first name must be at least 2 characters long.\n";
-            result = false;
         }
         if(fname == "")
         {
-            output +="The first name must be filled in.\n";
-            result = false;
+            output += "The first name must be filled in.\n";
         }
         return output;
     }
 
     public static String lastNameValidate(String lname, String output)
     {
-        boolean result = true;
         if(lname.length() < 2)
         {
             output += "The last name must be at least 2 characters long.\n";
-            result = false;
         }
         if(lname == "")
         {
             output += "The last name must be filled in.\n";
-            result = false;
         }
         return output;
     }

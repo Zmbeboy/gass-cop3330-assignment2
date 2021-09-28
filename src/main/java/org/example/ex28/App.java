@@ -8,20 +8,25 @@ import java.util.Scanner;
 
 public class App
 {
-    public static int getTotal()
+    public static int getTotal(int[]numArray)
     {
-        Scanner scan = new Scanner(System.in);
-        int total = 0;
-        for(int i = 0; i < 5; i++)
+        int total=0;
+        for(int i =0; i < numArray.length; i++)
         {
-            System.out.print("Enter a number: ");
-            total += scan.nextInt();
+            total += numArray[i];
         }
         return total;
     }
     public static void main(String[] args)
     {
-        int total = getTotal();
+        Scanner scan = new Scanner(System.in);
+        int[]numArray = new int[5];
+        for(int i = 0; i < 5; i++)
+        {
+            System.out.print("Enter a number: ");
+            numArray[i] = scan.nextInt();
+        }
+        int total = getTotal(numArray);
         System.out.println("The total is "+total+".");
     }
 }

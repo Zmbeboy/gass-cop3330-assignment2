@@ -8,13 +8,15 @@ import java.util.*;
 
 public class App
 {
-    public static void printResult(List<String> employees)
+    public static String getResult(List<String> employees)
     {
+        String result = "";
         System.out.println("\nThere are 4 employees:");
-        for(int i = 0; i<4;i++)
+        for(int i = 0; i< employees.size();i++)
         {
-            System.out.println(employees.get(i));
+            result += String.format("%s\n",employees.get(i));
         }
+        return result;
     }
     public static void main(String[] args)
     {
@@ -38,6 +40,6 @@ public class App
 
         employees.remove(remove);
 
-        printResult(employees);
+        System.out.println(getResult(employees));
     }
 }

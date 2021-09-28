@@ -8,6 +8,10 @@ import java.util.*;
 
 public class App
 {
+    public static int randomGet(int size)
+    {
+        return (int)(Math.random()*size);
+    }
     public static void main(String[] args)
     {
         List<String> employees = new ArrayList<String>();
@@ -28,7 +32,7 @@ public class App
             }
         }
 
-        int random = (int)(Math.random()*employees.size());
+        int random = randomGet(employees.size());
         System.out.println("The winner is: "+employees.get(random));
     }
 }

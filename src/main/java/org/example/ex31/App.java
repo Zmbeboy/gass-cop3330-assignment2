@@ -8,6 +8,10 @@ import java.util.Scanner;
 
 public class App
 {
+    public static double heartRate(int age, int pulse,double intensity)
+    {
+        return (((220 - age) - pulse) * ((double)intensity/100))+ pulse;
+    }
     public static void generateChart(int pulse, int age)
     {
         double targetHeartRate = 0;
@@ -16,8 +20,7 @@ public class App
         System.out.println("-------------|--------");
         for(int intensity = 55; intensity <=95; intensity+=5)
         {
-            targetHeartRate = (((220 - age) - pulse) * ((double)intensity/100))+ pulse;
-
+            targetHeartRate = heartRate(age,pulse,intensity);
             System.out.println(String.format("%d%c          | %3.0f bpm",intensity,c,targetHeartRate));
         }
     }

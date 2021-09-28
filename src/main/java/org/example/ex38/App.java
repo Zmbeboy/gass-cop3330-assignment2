@@ -11,7 +11,6 @@ public class App
 
     public static Integer[] filterEvenNumbers(int[]nums)
     {
-        System.out.print("The even numbers are ");
         Integer[] evens;
         List<Integer> evenNums = new ArrayList<>();
         int j = 0;
@@ -28,7 +27,7 @@ public class App
     public static char[] filterString(String input)
     {
         char[] chararray = new char[input.length()];
-        char[] filteredArray = new char[input.length()];
+        char[] filteredArray = new char[(input.length()/2)+1];
         int j = 0;
         chararray = input.toCharArray();
         for(int i = 0; i<chararray.length;i++)
@@ -54,6 +53,7 @@ public class App
             nums[i] = Character.getNumericValue(inputArray[i]);
         }
         evens = filterEvenNumbers(nums);
+        System.out.print("The even numbers are ");
         for(int i = 0; i< evens.length;i++)
         {
             System.out.print(evens[i]+ " ");

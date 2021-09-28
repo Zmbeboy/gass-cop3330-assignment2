@@ -11,6 +11,8 @@ public class App
 {
     public static boolean areAnagrams(char[] word1, char[] word2)
     {
+        Arrays.sort(word1);
+        Arrays.sort(word2);
         //if the arrays are the same length compare each character
         if(word1.length == word2.length)
         {
@@ -51,8 +53,6 @@ public class App
             word2[j] = string2.charAt(j);
         }
         //sort the characters
-        Arrays.sort(word1);
-        Arrays.sort(word2);
 
         boolean result = areAnagrams(word1,word2);
         if(result)

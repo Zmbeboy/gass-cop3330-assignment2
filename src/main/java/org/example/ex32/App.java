@@ -58,7 +58,12 @@ public class App
         }
         return true; //would not let me run the program without this despite already having 2 return statements
     }
-
+    public static int getRandomNumber(double difficulty)
+    {
+        difficulty = Math.pow(10.0, difficulty);
+        int randomNumber = (int)Math.ceil(Math.random() * difficulty);
+        return randomNumber;
+    }
     public static void playGame()
     {
         Scanner scan = new Scanner(System.in);
@@ -79,8 +84,7 @@ public class App
                 difficulty = Double.parseDouble(difficultyLevel);
                 invalid = false;
             }
-            difficulty = Math.pow(10.0, difficulty);
-            randomNumber = Math.ceil(Math.random() * difficulty);
+            randomNumber = getRandomNumber(difficulty);
             System.out.println("I have my number. What is your guess?");
             replay = numGuess(randomNumber);
             if(replay == true)
